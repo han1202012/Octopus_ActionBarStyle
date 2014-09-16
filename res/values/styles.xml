@@ -1,0 +1,60 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- 覆盖 android:actionBarStyle 样式, 自定义 标题 样式 -->
+        <item name="android:actionBarStyle">@style/OctopusActionBarStyle</item>
+        
+        <!-- 覆盖 android:actionMenuTextAppearance 样式, 自定义 菜单文字样式 -->
+        <item name="android:actionMenuTextAppearance">@style/OctopusMenuTittleStyle</item>
+        
+        <!-- 自定义向左的小箭头 -->
+        <item name="android:homeAsUpIndicator">@drawable/back1</item>
+    </style>
+    
+    <!-- 
+    	重写 android:actionBarStyle 样式
+    	集成 @android:style/Widget.Holo.Light.ActionBar.Solid.Inverse 样式
+     -->
+    <style 
+        name="OctopusActionBarStyle" 
+        parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+    	<item name="android:titleTextStyle">@style/OctopusActionBarTittle</item>
+    	<item name="android:background">@android:color/darker_gray</item>
+	</style>
+    
+    <!-- 
+    	重写 android:titleTextStyle 样式, 
+    	继承 @android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse 样式 
+    -->
+    <style 
+        name="OctopusActionBarTittle" 
+        parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
+        <item name="android:textColor">@android:color/holo_green_dark</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+    
+    <!-- 
+    	自定义的菜单样式
+     -->
+    <style 
+        name="OctopusMenuTittleStyle"
+        parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title.Inverse">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
